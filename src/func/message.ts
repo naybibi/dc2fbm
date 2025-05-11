@@ -44,7 +44,7 @@ export const menu = {
 
         await reply(sender,
             new QRRow()
-                .addText(`Good ${(getAccurateDate("state"))["en"]}, Nyvhie! 👋\n\n` +
+                .addText(`Good ${getAccurateDate("state")}, Nyvhie! 👋\n\n` +
                     `Your "${apps.name}" bot is ${apps.online ? "🟢 Online!" : " unfortunately 🔴 Offline..."}\n\n` +
                     `What can I do for you in terms of handling your bot? 🤔`)
                 .addQRs(
