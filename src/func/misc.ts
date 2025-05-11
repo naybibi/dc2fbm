@@ -82,10 +82,10 @@ export function getAccurateDate
     const newDate = new Date(`${date[1]} ${date[2]} ${date[3]} ${toMilitaryTime(`${date[5].split(":").slice(0, 2)} ${date[6]}`)}:${date[5].split(":")[2]}`);
     const hour = date[5].split(":")[0];
 
-    if (hour < 12 && hour !== 12) stateOutput = { en: "morning", tl: "umaga" };
-    else if (hour === 12) stateOutput = { en: "noon", tl: "tanghali" };
-    else if (hour < 18) stateOutput = { en: "afternoon", tl: "hapon" };
-    else stateOutput = { en: "evening", tl: "gabi" };
+    if (hour < 12 && hour !== 12) stateOutput = "morning";
+    else if (hour === 12) stateOutput = "noon";
+    else if (hour < 18) stateOutput = "afternoon";
+    else stateOutput = "evening";
     
     switch (element) {
       case "whole": output = date.join(" "); break;
